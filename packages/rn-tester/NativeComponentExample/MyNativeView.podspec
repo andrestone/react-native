@@ -28,7 +28,8 @@ Pod::Spec.new do |s|
     "CLANG_CXX_LANGUAGE_STANDARD" => "c++17"
   }
 
-  s.source_files    = "ios/**/*.{h,m,mm,cpp}"
+  s.source_files    = "ios/**/*.{h,m,mm,cpp}", "SwiftView.swift"
+  s.swift_version   = "5.0"
   s.requires_arc    = true
 
   s.dependency "React"

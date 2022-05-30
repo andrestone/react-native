@@ -14,6 +14,8 @@
 
 #import "RCTFabricComponentsPlugins.h"
 
+#import "MyNativeView-Swift.h"
+
 using namespace facebook::react;
 
 @interface RNTMyNativeViewComponentView () <RCTRNTMyNativeViewViewProtocol>
@@ -34,7 +36,7 @@ using namespace facebook::react;
     static const auto defaultProps = std::make_shared<const RNTMyNativeViewProps>();
     _props = defaultProps;
 
-    _view = [[UIView alloc] init];
+    _view = [SwiftView view];
     _view.backgroundColor = [UIColor redColor];
 
     self.contentView = _view;
